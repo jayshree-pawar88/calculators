@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate area and perimeter</title>
+    <style>
+        .container{
+            margin: 100px;
+            padding: 80px;
+            background-color: blueviolet;
+            color: white;
+            width: 500px;
+        }
+        input{
+            height: 35px;
+            width: 150px;
+        }
+        input:focus{
+            border: 2px solid white;
+            box-shadow: 3px 4px black;
+            border-radius: 5px;
+        }
+        button{
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            font-size: 25px;
+            display: block;
+            margin: 20px 200px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <h1>Calculate Area and Perimeter of Rectangle</h1>
+    
+    <label>Area of Rectangle</label>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+
+    <button onclick="result();">Result</button>
+
+    <label for="area">Area:</label>
+    <input type="number" id="area">
+
+    <label for="peri">Perimeter:</label>
+    <input type="number" id="peri">
+    </div>
+
+    <script>
+        function result(){
+     x = document.getElementById("number1").value;
+     y = document.getElementById("number2").value;
+
+     document.getElementById("area").value = x * y;
+     document.getElementById("peri").value = 2*x + 2*y;
+        }
+    </script>
+
+<div class="container">
+    <h1>Calculate Area and Perimeter circle</h1>
+    
+    <label>Area of circle</label>
+    <input type="number" id="num1">
+    
+
+    <button onclick="circle();">Result</button>
+
+    <label for="area-circle">Area:</label>
+    <input type="number" id="area-circle">
+
+</div>
+
+<script>
+    function circle(){
+
+    radius = document.getElementById("num1").value;
+    var pi = 3.14;
+
+    document.getElementById("area-circle").value = pi * radius * radius;
+     
+    }
+</script>
+</body>
+</html>
