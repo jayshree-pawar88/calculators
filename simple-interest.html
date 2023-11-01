@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest calculator</title>
+    <style>
+        .container{
+            background-color: rgb(16, 49, 10);
+            color: white;
+            width: 350px;
+            height: 450px;
+            margin: 100px;
+            padding: 50px;
+            text-align: center;
+    
+        }
+        label{
+            font-size: 20px;
+        }
+        input{
+            border-radius: 5px;
+            height: 30px;
+            width: 150px;
+            margin: 10px;
+            display: block;
+            margin-left: 100px;
+        }
+        button{
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: white;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>Simple Interest Calculator: Write a program that calculates simple interest based on user input for principal amount, rate, and time.</p> -->
+   <div class="container">
+
+    <h1>Simple Interest Calculator</h1>
+
+    <label for="amount">Amount</label>
+    <input type="number" id="amount">
+
+    <label for="roi">Rate of interest</label>
+    <input type="number" id="roi">
+
+    <label for="time">Time</label>
+    <input type="number" id="time">
+
+    <button onclick="ratInterest()">Submit</button>
+     <br>
+    <label for="result">Result</label>
+    <input type="number" id="result">
+
+   </div>
+
+   <script>
+    function ratInterest(){
+    var p = document.getElementById("amount").value;
+    var r = document.getElementById("roi").value;
+    var t = document.getElementById("time").value;
+
+    var z =  (p * t * r) / 100;
+
+    var myresult = document.getElementById("result");
+
+    myresult.value = z;
+    
+    }
+   </script>
+
+</body>
+</html>

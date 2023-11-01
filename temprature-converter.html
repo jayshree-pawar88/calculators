@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temparature convertor</title>
+    <style>
+        .container{
+            background-color: brown;
+            color: white;
+            width: 250px;
+            height: 300px;
+            margin: 100px;
+            padding: 50px;
+        }
+        label{
+            display: block;
+            font-size: 25px;
+        }
+        input{
+            border-radius: 5px;
+            height: 30px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p>Temperature Converter: Build a temperature converter that allows users to convert between Celsius and Fahrenheit. Use the formula: Fahrenheit = (Celsius * 9/5) + 32 and vice versa.
+    </p> -->
+
+    <div class="container">
+         <h1>Temperature Converter</h1>
+
+         <label>Celsius</label>
+         <input type="number" id="Cel" value="0">
+
+         <label>Fahrenheit</label>
+         <input type="number" id="fah" value="32">
+    </div>
+
+    <script>
+        var cel = document.getElementById("Cel");
+        var fah = document.getElementById("fah");
+      
+        Cel.addEventListener('input',function(){
+            let c = this.value;
+            let f = (c * 9/5) + 32;
+            fah.value = f;
+        })
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Convertor</title>
+    <style>
+        .container{
+            background-color: rgb(16, 49, 10);
+            color: white;
+            width: 350px;
+            height: 400px;
+            margin: 100px;
+            padding: 50px;
+            text-align: center;
+    
+        }
+        label{
+            font-size: 20px;
+        }
+        input{
+            border-radius: 5px;
+            height: 30px;
+            width: 150px;
+            margin: 10px;
+            display: block;
+            margin-left: 100px;
+        }
+        button{
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: white;
+            color: red;
+    
+        }
+    </style>
+</head>
+<body>
+<!-- <p>Time Converter: Create a time converter that allows users to convert between different time units (e.g., hours to minutes, minutes to seconds).</p> -->
+    <div class="container">
+        <h1>Time Converter</h1>
+         <label for="hour">Hour</label>
+         <input type="number" id="hour">
+    
+         <button onclick="result()">Result</button><br>
+
+         <label for="minute">Minute</label>
+         <input type="number" id="minute">
+    
+         <label for="second">Second</label>
+         <input type="number" id="second">
+    
+    </div>
+    
+    <script>
+        function result(){
+          var x =document.getElementById("hour").value;
+              
+          let minute = document.getElementById("minute");
+          minute.value = x*60;
+
+          let second = document.getElementById("second");
+          second.value = x * 3600;
+        }
+    </script>
+</body>
+</html>
