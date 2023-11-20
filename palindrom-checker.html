@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome checker</title>
+    <style>
+        .container{
+            background-color: rgb(16, 49, 10);
+            color: white;
+            width: 350px;
+            height: 300px;
+            margin: 100px;
+            padding: 50px;
+            text-align: center;
+    
+        }
+        label{
+            font-size: 20px;
+        }
+        input{
+            border-radius: 5px;
+            height: 30px;
+            width: 150px;
+            margin: 10px;
+            display: block;
+            margin-left: 100px;
+        }
+        button{
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: white;
+            color: red;
+    
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>Palindrome Checker: Write a program that checks if a given word or phrase is a palindrome (reads the same forwards and backwards).</p> -->
+    <div class="container">
+    <h1>Palindrome Checker</h1>
+
+    <label for="str">Enetr the string</label>
+    <input type="text" id="str">
+
+    <button onclick="check()">Check</button>
+    <p id="check"></p>
+    </div>
+
+    <script>
+        function check(){
+            var x = document.getElementById("str").value;
+            var y = x.split('').reverse().join('');
+            if( x==y){
+                document.getElementById("check").innerHTML = "It is palindrom" ;
+            }
+            else{
+                document.getElementById("check").innerHTML = "It is not palindrom" ;
+            }
+
+        }
+    </script>
+
+</body>
+</html>
